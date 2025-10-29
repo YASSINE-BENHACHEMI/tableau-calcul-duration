@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Step 1 — Task Manager (Static Table)</title>
+  <style>
+    :root{font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{background:#f5f7fb;padding:24px;color:#222}
+    .container{max-width:900px;margin:0 auto}
+    h1{font-size:20px;margin-bottom:8px}
+    table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+    th{background:#fafafa;font-weight:700}
+    .actions button{padding:6px 10px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:default}
+    .small{font-size:13px;color:#555;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Step 1: Display static task table</h1>
+    <p class="small">Tableau statique — colonnes : Task Name, Duration (days), Predecessor, Action. 5 tâches préremplies.</p>
+
+    <table aria-label="Task table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Task Name</th>
+          <th>Duration (days)</th>
+          <th>Predecessor</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 5 tâches préremplies -->
+        <tr>
+          <td>1</td>
+          <td>Analyse des besoins</td>
+          <td>3</td>
+          <td>—</td>
+          <td class="actions"><button disabled>Delete</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Design UI</td>
+          <td>5</td>
+          <td>1</td>
+          <td class="actions"><button disabled>Delete</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Développement front-end</td>
+          <td>8</td>
+          <td>2</td>
+          <td class="actions"><button disabled>Delete</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Tests</td>
+          <td>4</td>
+          <td>3</td>
+          <td class="actions"><button disabled>Delete</button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Déploiement</td>
+          <td>2</td>
+          <td>4</td>
+          <td class="actions"><button disabled>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="small" style="margin-top:12px">
+      Commit suggéré pour GitHub : <code>step1: display task table with static data</code>
+    </p>
+  </div>
+</body>
+</html>
